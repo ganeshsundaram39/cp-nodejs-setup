@@ -23,8 +23,12 @@ var A = require('./A')
 
 function main() {
     // A.nextRound({ readLine });
-    A.stringTask({readLine});
+    // A.stringTask({readLine});
+    // A.bitPlusPlus({readLine});
+
+
 
 }
+
 
 

@@ -26,3 +26,20 @@ exports.stringTask = ({ readLine }) => {
 
     console.log(result);
 }
+
+
+exports.bitPlusPlus = ({ readLine }) => {
+    let [numberOfStatements] = readLine(), finalValue = 0;
+    numberOfStatements = +numberOfStatements;
+    let statement;
+    for (let i = 0; i < numberOfStatements; i++) {
+        statement = readLine()[0];
+        if (statement.includes('++')) {
+            finalValue += 1;
+        } else if (statement.includes('--')) {
+            finalValue -= 1;
+        }
+    }
+
+    console.log(finalValue);
+}
