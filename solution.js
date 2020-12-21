@@ -25,9 +25,7 @@ function main() {
     // A.nextRound({ readLine });
     // A.stringTask({readLine});
     // A.bitPlusPlus({readLine});
-
-
-
+    A.petyaAndStrings({readLine});
 }
 
 

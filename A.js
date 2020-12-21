@@ -17,7 +17,7 @@ exports.stringTask = ({ readLine }) => {
     input = input.toLowerCase();
 
     for (let i of input) {
-        if (i == 'a' || i=='y'||i == 'e' || i == 'o' || i == 'i' || i == 'u') {
+        if (i == 'a' || i == 'y' || i == 'e' || i == 'o' || i == 'i' || i == 'u') {
             result += ''
         } else {
             result += '.' + i
@@ -42,4 +42,23 @@ exports.bitPlusPlus = ({ readLine }) => {
     }
 
     console.log(finalValue);
+}
+
+exports.petyaAndStrings = ({ readLine }) => {
+    let [firstString] = readLine();
+    let [secondString] = readLine(), result = 0;
+    firstString = firstString.toLowerCase();
+    secondString = secondString.toLowerCase();
+    for (let i = 0; i < firstString.length; ++i) {
+        if (firstString[i] == secondString[i]) {
+            continue;
+        } else if (firstString.charCodeAt(i) < secondString.charCodeAt(i)) {
+            result = "-1";
+            break;
+        } else {
+            result = "1";
+            break;
+        }
+    }
+    console.log(result);
 }
