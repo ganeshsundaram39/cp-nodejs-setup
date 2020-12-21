@@ -62,3 +62,18 @@ exports.petyaAndStrings = ({ readLine }) => {
     }
     console.log(result);
 }
+
+exports.beautifulMatrix = ({ readLine }) => {
+    let result = 0;
+    let row, rowIndex, columnIndex;
+    for (let i = 0; i < 5; ++i) {
+        rowIndex = i;
+        row = readLine();
+        columnIndex = row.indexOf("1");
+        if (columnIndex >= 0) {
+            break;
+        }
+    }
+    result = Math.abs(rowIndex - 2) + Math.abs(columnIndex - 2);
+    console.log(result);
+}
