@@ -19,7 +19,7 @@ process.stdin.on('end', _ => {
     main()
 })
 
-var A = require('./A')
+// var A = require('./A')
 
 function main() {
     // A.nextRound({ readLine });
@@ -31,7 +31,7 @@ function main() {
     // A.firstCaptitalize({readLine});
     // A.stonesOnTable({readLine});
     // A.boyOrGirl({readLine});
-    A.football({readLine});
+    // A.football({readLine});
 
 
 
