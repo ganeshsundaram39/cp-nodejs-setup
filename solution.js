@@ -19,22 +19,9 @@ process.stdin.on('end', _ => {
     main()
 })
 
-// var A = require('./A')
+var A = require('./A')
 
 function main() {
-    // A.nextRound({ readLine });
-    // A.stringTask({readLine});
-    // A.bitPlusPlus({readLine});
-    // A.petyaAndStrings({readLine});
-    // A.beautifulMatrix({readLine});
-    // A.helpfulMaths({readLine});
-    // A.firstCaptitalize({readLine});
-    // A.stonesOnTable({readLine});
-    // A.boyOrGirl({readLine});
-    // A.football({readLine});
-
-
-
-
+    A.youngPhysicist({readLine});
 
 }

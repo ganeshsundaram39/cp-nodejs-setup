@@ -80,7 +80,7 @@ exports.beautifulMatrix = ({ readLine }) => {
 
 
 
-exports.helpfulMaths=({readLine})=> {
+exports.helpfulMaths = ({ readLine }) => {
     function merge(left, right) {
 
         let i = 0, j = 0, result = [];
@@ -123,12 +123,12 @@ exports.helpfulMaths=({readLine})=> {
     console.log(mergeSort(readLine()[0].split('+')).join('+'));
 }
 
-exports.firstCaptitalize=({readLine}) =>{
+exports.firstCaptitalize = ({ readLine }) => {
     let [word] = readLine();
     console.log(word[0].toUpperCase() + word.slice(1));
 }
 
-exports.stonesOnTable=({readLine})=> {
+exports.stonesOnTable = ({ readLine }) => {
     let [count] = readLine();
     let [stones] = readLine();
     stones = stones.split('');
@@ -141,7 +141,7 @@ exports.stonesOnTable=({readLine})=> {
     console.log(result);
 }
 
-exports.boyOrGirl=({readLine})=> {
+exports.boyOrGirl = ({ readLine }) => {
     let [word] = readLine();
 
     word = word.split('');
@@ -156,7 +156,7 @@ exports.boyOrGirl=({readLine})=> {
     console.log(count % 2 === 0 ? 'CHAT WITH HER!' : 'IGNORE HIM!');
 }
 
-exports.football=({readLine})=> {
+exports.football = ({ readLine }) => {
     let [players] = readLine();
 
     players = players.split('');
@@ -182,4 +182,21 @@ exports.football=({readLine})=> {
         console.log('NO')
     }
 
+}
+
+exports.youngPhysicist = ({ readLine }) => {
+
+    let [count] = readLine();
+    count = +count;
+    let current;
+    let x = 0, y = 0, z = 0;
+    while (count >= 1) {
+        current = readLine()
+        x += +current[0];
+        y += +current[1];
+        z += +current[2];
+        --count;
+    }
+    let isZero = sum => sum === 0;
+    console.log(isZero(x) && isZero(y) && isZero(z) ? 'YES' : 'NO');
 }
