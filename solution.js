@@ -19,7 +19,7 @@ process.stdin.on('end', _ => {
     main()
 })
 
-// var A = require('./A')
+var A = require('./A')
 
 function main() {
     // A.nextRound({ readLine });
@@ -27,5 +27,6 @@ function main() {
     // A.bitPlusPlus({readLine});
     // A.petyaAndStrings({readLine});
     // A.beautifulMatrix({readLine});
-
+    A.helpfulMaths({readLine});
 }
+

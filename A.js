@@ -77,3 +77,49 @@ exports.beautifulMatrix = ({ readLine }) => {
     result = Math.abs(rowIndex - 2) + Math.abs(columnIndex - 2);
     console.log(result);
 }
+
+
+
+exports.helpfulMaths=({readLine})=> {
+    function merge(left, right) {
+
+        let i = 0, j = 0, result = [];
+
+        while (i < left.length && j < right.length) {
+            if (left[i] < right[j]) {
+                result.push(left[i]);
+                i++;
+            } else {
+                result.push(right[j]);
+                j++;
+            }
+        }
+
+        while (i < left.length) {
+
+            result.push(left[i]);
+            i++;
+
+        }
+        while (j < right.length) {
+            result.push(right[j]);
+            j++;
+
+        }
+        return result;
+    }
+    function mergeSort(arr) {
+        if (!arr || arr.length <= 1)
+            return arr;
+
+        let middle = Math.floor(arr.length / 2);
+
+        let left = mergeSort(arr.slice(0, middle));
+        let right = mergeSort(arr.slice(middle));
+
+        return merge(left, right);
+    }
+
+    console.log(mergeSort(readLine()[0].split('+')).join('+'));
+}
+
