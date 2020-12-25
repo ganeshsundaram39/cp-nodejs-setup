@@ -19,8 +19,8 @@ process.stdin.on('end', _ => {
     main()
 })
 
-var A = require('./A')
+// var A = require('./A')
 
 function main() {
-    A.tram({readLine});
+    // A.word({readLine});
 }

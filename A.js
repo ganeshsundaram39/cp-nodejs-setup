@@ -263,3 +263,22 @@ exports.tram = ({readLine})=>{
 
     console.log(max);
 }
+
+exports.word =({readLine})=>{
+    let [S] = readLine();
+    let uppers=0,lowers=0;
+    for(let i in S){
+        if(S.charCodeAt(i)>64 && S.charCodeAt(i)<91){
+            uppers+=1
+        } else {
+            lowers+=1
+        }
+    }
+    if(uppers>lowers){
+        console.log(S.toUpperCase())
+    }else if(uppers<lowers){
+        console.log(S.toLowerCase())
+    }else {
+        console.log(S.toLowerCase())
+    }
+}
