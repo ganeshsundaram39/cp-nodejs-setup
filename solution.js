@@ -28,9 +28,13 @@ function main() {
     // A.petyaAndStrings({readLine});
     // A.beautifulMatrix({readLine});
     // A.helpfulMaths({readLine});
+    // A.firstCaptitalize({readLine});
+    // A.stonesOnTable({readLine});
+    // A.boyOrGirl({readLine});
+    A.football({readLine});
 
-    A.firstCaptitalize({readLine});
+
+
+
 
 }
-
-

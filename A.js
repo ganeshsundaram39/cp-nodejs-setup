@@ -124,8 +124,62 @@ exports.helpfulMaths=({readLine})=> {
 }
 
 exports.firstCaptitalize=({readLine}) =>{
-    let word = readLine()[0];
-    word = word[0].toUpperCase() + word.slice(1);
-    console.log(word);
+    let [word] = readLine();
+    console.log(word[0].toUpperCase() + word.slice(1));
 }
 
+exports.stonesOnTable=({readLine})=> {
+    let [count] = readLine();
+    let [stones] = readLine();
+    stones = stones.split('');
+    let result = 0;
+    for (let i = 0; i < count - 1; i++) {
+        if (stones[i] == stones[i + 1]) {
+            ++result;
+        }
+    }
+    console.log(result);
+}
+
+exports.boyOrGirl=({readLine})=> {
+    let [word] = readLine();
+
+    word = word.split('');
+    let obj = {};
+    for (let w of word) {
+        obj[w] = 1;
+    }
+    let count = 0;
+    for (let i in obj) {
+        count += obj[i];
+    }
+    console.log(count % 2 === 0 ? 'CHAT WITH HER!' : 'IGNORE HIM!');
+}
+
+exports.football=({readLine})=> {
+    let [players] = readLine();
+
+    players = players.split('');
+    let obj = { 0: 0, 1: 0 };
+    let isDangerous;
+    let current = players[0];
+    for (let v of players) {
+        if (v != current) {
+            obj[current] = 0;
+            current = v;
+            obj[v] = 1;
+        } else {
+            obj[v] = ++obj[v]
+        }
+        if (obj[v] && obj[v] == 7) {
+            isDangerous = true;
+            break;
+        }
+    }
+    if (isDangerous) {
+        console.log('YES')
+    } else {
+        console.log('NO')
+    }
+
+}
