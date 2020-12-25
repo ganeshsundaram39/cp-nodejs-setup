@@ -22,6 +22,5 @@ process.stdin.on('end', _ => {
 var A = require('./A')
 
 function main() {
-    A.youngPhysicist({readLine});
-
+    A.tram({readLine});
 }

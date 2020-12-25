@@ -200,3 +200,66 @@ exports.youngPhysicist = ({ readLine }) => {
     let isZero = sum => sum === 0;
     console.log(isZero(x) && isZero(y) && isZero(z) ? 'YES' : 'NO');
 }
+
+exports.soldiersAndBananas = ({ readLine }) => {
+
+    let sum = 0;
+
+    let [k, n, w] = readLine();
+    k = +k;
+    n = +n;
+    w = +w;
+    for (let i = 1; i <= w; i++) {
+        sum = sum + (i * k);
+    }
+    if (sum <= n) {
+        console.log('0')
+    } else {
+        console.log(sum - n)
+    }
+}
+exports.bear = ({ readLine }) => {
+    let [a, b] = readLine();
+    let i = 1;
+    while (i >= 1) {
+        a = a * 3;
+        b = b * 2;
+        if (a > b) {
+            break;
+        }
+        i++;
+    }
+    console.log(i)
+
+}
+
+exports.wrongSubstraction = ({ readLine }) => {
+    let [n, k] = readLine();
+    n = +n;
+    k = +k;
+    for (let i = 1; i <= k; i++) {
+        if (n % 10 != 0) {
+            n = n - 1;
+        } else {
+            n = n / 10;
+        }
+    }
+    console.log(n)
+}
+
+exports.tram = ({readLine})=>{
+    let [stops] = readLine();
+    stops = +stops;
+    let stop = readLine();
+    let peopleCount=+stop[1];
+    let max=peopleCount;
+    for(let i=1;i<stops;i++){
+        stop = readLine();
+        stop[0] = +stop[0];
+        stop[1] = +stop[1]
+        peopleCount = peopleCount- stop[0] + stop[1];
+       max = Math.max(peopleCount,max)
+    }
+
+    console.log(max);
+}
