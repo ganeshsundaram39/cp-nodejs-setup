@@ -27,6 +27,10 @@ function main() {
     // A.bitPlusPlus({readLine});
     // A.petyaAndStrings({readLine});
     // A.beautifulMatrix({readLine});
-    A.helpfulMaths({readLine});
+    // A.helpfulMaths({readLine});
+
+    A.firstCaptitalize({readLine});
+
 }
+
 

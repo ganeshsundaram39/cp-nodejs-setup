@@ -123,3 +123,9 @@ exports.helpfulMaths=({readLine})=> {
     console.log(mergeSort(readLine()[0].split('+')).join('+'));
 }
 
+exports.firstCaptitalize=({readLine}) =>{
+    let word = readLine()[0];
+    word = word[0].toUpperCase() + word.slice(1);
+    console.log(word);
+}
+
