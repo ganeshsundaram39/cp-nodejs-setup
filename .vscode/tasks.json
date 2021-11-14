@@ -4,11 +4,11 @@
     "version": "2.0.0",
     "tasks": [
         {
-            "label": "Node JS Problem solving",
+            "label": "node problem solving",
             "type": "shell",
             "command": "node",
             "args": [
-                "${file}",
+                "run.js",
                 "<",
                 "input.txt",
                 ">",
